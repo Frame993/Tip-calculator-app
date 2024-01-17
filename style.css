@@ -39,7 +39,7 @@ body {
 }
 
 
-main {
+article {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 1.5rem;
@@ -48,15 +48,15 @@ main {
     background-color: var(--White);
 }
 
-nav img {
-    margin-top: 50px;
-   }
+/* nav img {
+    margin-top: 0px;
+   } */
 
-ul {
+/* ul {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-}
+} */
 
 input[type = number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -96,7 +96,7 @@ input::placeholder {
 .tip-amount {
     display: flex;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 6rem;
 }
 
 .total-amount {
@@ -119,6 +119,7 @@ input::placeholder {
 
 #reset:hover {
     all: unset;
+    cursor: pointer;
     display: flex;
     font-family: 'Space Mono';
     font-weight: 700;
@@ -130,11 +131,15 @@ input::placeholder {
     justify-content: center;    
 }
 
+#reset:active {
+    background-color: var(--Strong-cyan);
+}
 
 /* left container styles */
 
 
 #bill-amount {
+    all: unset;
     padding: .5rem;
     background-image: url(./images/icon-dollar.svg);
     background-size: 8px;
@@ -149,7 +154,12 @@ input::placeholder {
     border: none;
 }
 
+#bill-amount:focus {
+    outline: 2px solid var(--Strong-cyan);
+}
+
 #people-amount {
+    all: unset;
     padding: .5rem;
     background-image: url(./images/icon-person.svg);
     background-size: 8px;
@@ -164,17 +174,36 @@ input::placeholder {
     border: none;
 }
 
-ul {
+#people-amount:focus {
+    outline: 2px solid var(--Strong-cyan);
+}
+
+#percentages {            /* changed for ul */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: .5rem;
 }
 
-li {
+/* ul {
+    gap: .5rem;
+} */
+
+#percentages button {    /* changed for li */
+    all: unset;
     color: var(--Very-light-grayish-cyan);
     text-align: center;    
     background-color: var(--Very-dark-cyan);
     padding: .3rem;
     border-radius: .2rem;
 }
+
+/* li {
+    color: var(--Very-light-grayish-cyan);
+    text-align: center;    
+    background-color: var(--Very-dark-cyan);
+    padding: .3rem;
+    border-radius: .2rem;
+} */
 
 .bill {
     display: flex;
@@ -231,7 +260,7 @@ span {
     body {
     
     }   
-    main {
+    article {
         grid-template-columns: 1fr;
         width: 100%;
         padding: 1rem;
@@ -239,12 +268,12 @@ span {
     .megacontainers {
         margin: 1rem;
     }
-    ul {
+    #percentages {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
-    li {
-        gap: ;
+    #percentages button {
+        /* gap: ; */
         padding-top: 1rem;
         padding-bottom: 1rem;
         font-size: 1.5rem;
