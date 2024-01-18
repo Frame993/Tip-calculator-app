@@ -74,4 +74,6 @@ const doReset = () => {
   billAmount.value = "";
   customTip.value = "";
   numberOfPeople.value = "";
+  document.getElementById("tip-amount-person").innerHTML = "$0.00";
+  document.getElementById("total-amount-person").innerHTML = "$0.00";
 };
