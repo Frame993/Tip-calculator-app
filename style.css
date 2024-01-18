@@ -38,7 +38,6 @@ body {
     font-family: 'Space Mono';
 }
 
-
 article {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -48,15 +47,9 @@ article {
     background-color: var(--White);
 }
 
-/* nav img {
-    margin-top: 0px;
-   } */
-
-/* ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-} */
+input {
+    all: unset;
+}
 
 input[type = number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -67,7 +60,7 @@ input::placeholder {
     font-weight: bold;
     opacity: 0.5;
     color: var(--Grayish-cyan);
-  }
+}
 
 .megacontainers {
     display: flex;
@@ -96,7 +89,7 @@ input::placeholder {
 .tip-amount {
     display: flex;
     justify-content: space-between;
-    gap: 6rem;
+    gap: 6rem; 
 }
 
 .total-amount {
@@ -134,9 +127,6 @@ input::placeholder {
 #reset:active {
     background-color: var(--Strong-cyan);
 }
-
-/* left container styles */
-
 
 #bill-amount {
     all: unset;
@@ -178,23 +168,46 @@ input::placeholder {
     outline: 2px solid var(--Strong-cyan);
 }
 
-#percentages {            /* changed for ul */
+#percentages {          
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: .5rem;
 }
 
-/* ul {
-    gap: .5rem;
-} */
+#percentages button, #percentages input { 
+   max-width: 100px;
+}
 
-#percentages button {    /* changed for li */
+#percentages button {   
     all: unset;
+    cursor: pointer;
     color: var(--Very-light-grayish-cyan);
     text-align: center;    
     background-color: var(--Very-dark-cyan);
     padding: .3rem;
     border-radius: .2rem;
+}
+
+/* #percentages button:focus {
+    cursor: pointer;
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+} */
+
+#custom {
+    all: unset;
+    width: 100%;
+    padding: .3rem;
+    text-align: center;
+    font-family: 'Space Mono';
+    color: var(--Very-dark-cyan);
+    background-color: var(--Very-light-grayish-cyan);
+    border-radius: .2rem;
+    border: none;
+}
+
+#custom:focus {
+    outline: 2px solid var(--Strong-cyan);
 }
 
 /* li {
@@ -254,24 +267,29 @@ span {
     color: var(--Strong-cyan);
 }
 
+.active {
+    background-color: var(--Light-grayish-cyan) !important; 
+    color: var(--Very-dark-cyan) !important;
+}
 
 @media screen and (max-width: 600px) {
 
-    body {
-    
-    }   
     article {
         grid-template-columns: 1fr;
         width: 100%;
         padding: 1rem;
     }
+
     .megacontainers {
         margin: 1rem;
     }
+
     #percentages {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
+
     #percentages button {
         /* gap: ; */
         padding-top: 1rem;
@@ -279,6 +297,12 @@ span {
         font-size: 1.5rem;
         border-radius: .5rem;
     }
+
+    #percentages input {
+        max-width: 100%;
+        padding: 1rem 0;
+    }
+
     #left {
         gap: 2.5rem;
     }

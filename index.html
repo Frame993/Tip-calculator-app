@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav><img src="./images/logo.svg" alt="logo" /></nav>
 
-</head>
-<body>
-  
-  <nav><img src="./images/logo.svg" alt="logo"></nav>
-  
-  <article class="container">
-
-    <section id='left' class="megacontainers">
-
-      <section class="bill">
-        <h3>Bill</h3>
-        <input id="bill-amount" type="number" placeholder="0" required>
-      </section>
-
-      <section class="select-tip">
-        <h3>Select Tip %</h3>
-        <section id="percentages">
-          <button id="five" type="submit">5%</button>
-          <button id="ten">10%</button>
-          <button id="fifteen">15%</button>
-          <button id="twenty-five">25%</button>
-          <button id="fifty">50%</button>
-          <button id="custom">Custom</button>
+    <article class="container">
+      <section id="left" class="megacontainers">
+        <section class="bill">
+          <h3>Bill</h3>
+          <input id="bill-amount" type="number" placeholder="0" required />
         </section>
-        <!-- <ul>
+
+        <section class="select-tip">
+          <h3>Select Tip %</h3>
+          <section id="percentages">
+            <button id="five" type="submit">5%</button>
+            <button id="ten">10%</button>
+            <button id="fifteen">15%</button>
+            <button id="twenty-five">25%</button>
+            <button id="fifty">50%</button>
+            <input id="custom" type="number" placeholder="Custom" required />
+            <!-- <button id="custom">Custom</button> -->
+          </section>
+          <!-- <ul>
           <li id="five">5%</li>
           <li id="ten">10%</li>
           <li id="fifteen">15%</li>
@@ -45,41 +51,46 @@
           <li id="fifty">50%</li>
           <li id="custom">Custom</li>
         </ul> -->
-      </section>
-
-      <section class="number-of-people">
-        <h3>Number of People</h3>
-        <input id="people-amount" type="number" placeholder="0" required>
-      </section>
-
-    </section>
-
-    <section id='right' class= "megacontainers">
-      
-      <div class="both-amounts">
-        <section class="tip-amount">
-          <div class="total">
-            <h3>Tip Amount<br><h4>/ person</h4></h3>          
-          </div>
-          <span id="tip-amount-person">$0.00</span>
         </section>
 
-        <section class="total-amount">
-          <div class="total">
-            <h3>Total<br><h4>/ person</h4></h3> 
-          </div>
-          <span id="total-amount-person">$0.00</span>
+        <section class="number-of-people">
+          <h3>Number of People</h3>
+          <input id="people-amount" type="number" placeholder="0" required />
         </section>
-      </div>
+      </section>
 
-      <button id="reset">Reset</button>
-    
-    </section>
-  </article>
-  
-  <!-- <div class="attribution">
+      <section id="right" class="megacontainers">
+        <div class="both-amounts">
+          <section class="tip-amount">
+            <div class="total">
+              <h3>
+                Tip Amount<br />
+                <h4>/ person</h4>
+              </h3>
+            </div>
+            <span id="tip-amount-person">$0.00</span>
+          </section>
+
+          <section class="total-amount">
+            <div class="total">
+              <h3>
+                Total<br />
+                <h4>/ person</h4>
+              </h3>
+            </div>
+            <span id="total-amount-person">$0.00</span>
+          </section>
+        </div>
+
+        <button id="reset" onclick="doReset()">Reset</button>
+      </section>
+    </article>
+
+    <script src="./script.js"></script>
+
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-</body>
+  </body>
 </html>
