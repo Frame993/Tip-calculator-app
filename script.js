@@ -63,7 +63,7 @@ numberOfPeople.addEventListener("input", () => {
   doCalculate();
 });
 
-/**Si escribes dentro de bill amount */
+/**Si escribes dentro de bill amount  */
 billAmount.addEventListener("input", () => {
   const percentages = document.querySelectorAll("#percentages button");
   doCalculate();
